@@ -1,84 +1,83 @@
-h2 {
+body .header h2 {
   color: #0e0e0e;
   font-weight: bold;
 }
-.cards > div {
+body .container-fluid .first {
+  color: #7c7c7c;
+  font-size: 19px;
+  margin-top: 10px;
+}
+body .container-fluid .second {
+  color: #0e0e0e;
+  font-size: 19px;
+}
+body .container-fluid .cards > div {
   border: 1px solid #cec6c6;
   display: inline-block;
   box-sizing: border-box;
-  height: 240px;
-  width: 280px;
   margin-right: -1px;
 }
-.cards h3 {
-  margin-top: 15%;
+body .container-fluid .cards .S p {
+  margin-bottom: 30px;
+}
+body .container-fluid .cards h3 {
+  margin-top: 30px;
   color: #0e0e0e;
 }
-.cards .cijena {
+body .container-fluid .cards .price {
   color: #5596e0;
 }
-.cards .cijena p {
+body .container-fluid .cards .price p {
   font-weight: bold;
-  margin-bottom: 12%;
+  margin-bottom: 20px;
 }
-.cards > div > p {
-  min-height: 20%;
-}
-.cards .btn {
+body .container-fluid .cards .btn {
   border-radius: 0;
   padding: 6px 22px;
   font-size: 12px;
   color: #5596e0;
+  margin-bottom: 20px;
 }
-body > div {
-  margin: 30px auto;
-}
-.container .btn {
+body .footer .btn {
   border-radius: 0;
   padding: 11px 30px;
   font-size: 20px;
   margin-top: 40px;
   border: none;
 }
-.container .btn-primary {
+body .footer .btn-primary {
   background-color: #5596e0;
 }
-.container .btn-primary:hover {
+body .footer .btn-primary:hover {
   background-color: #2375d3;
 }
-.container small {
+body .footer small {
   color: #7c7c7c;
 }
-.black {
+body .footer .black {
   margin-left: 40px;
   background-color: #000000;
   color: #FFFFFF;
 }
-.black:hover {
+body .footer .black:hover {
   background-color: #7c7c7c;
   color: #FFFFFF;
 }
-.first {
-  color: #7c7c7c;
-  font-size: 19px;
-  margin-top: 10%;
-}
-.second {
-  color: #0e0e0e;
-  font-size: 19px;
-  width: 95%;
-}
-@media screen and (max-width: 1530px) and (min-width: 992px) {
-  .cards div {
+@media screen and (max-width: 1264px) and (min-width: 960px) {
+  .col-md-offset-1 p {
+    width: 100%;
+  }
+  .col-md-offset-1 .container-fluid .cards {
     width: 30%;
-    margin-bottom: 20px;
-    height: 260px;
   }
-  .cijena {
-    display: inline-table;
+  .col-md-offset-1 .container-fluid .cards .S p {
+    margin-bottom: 20px;
+  }
+  .col-md-offset-1 .price {
+    display: inline-block;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1264px) and (min-width: 960px) and screen and (max-width: 959px) and (min-width: 600px) {
   .cards div {
     width: 40%;
     margin-bottom: 20px;
@@ -87,22 +86,19 @@ body > div {
     margin-bottom: 20px;
     width: 100%;
   }
-  .cijena {
+  .price {
     display: inline-table;
   }
-  .cijena p {
+  .price p {
     min-height: 40px;
     margin-bottom: 0;
   }
 }
-@media screen and (max-width: 729px) {
+@media screen and (max-width: 1264px) and (min-width: 960px) and screen and (max-width: 599px) {
   .cards div {
     width: 100%;
   }
-  .cards h3 {
-    margin-top: 5%;
-  }
-  .cards .cijena p {
-    margin-bottom: 2%;
+  .cards .price p {
+    margin-bottom: 10px;
   }
 }
