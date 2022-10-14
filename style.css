@@ -1,48 +1,80 @@
 body .header h2 {
   color: #0e0e0e;
-  font-weight: bold;
 }
-body .container-fluid .first {
+body .header p {
   color: #7c7c7c;
-  font-size: 19px;
-  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
-body .container-fluid .second {
+body > .row {
+  position: relative;
+  left: 5%;
+}
+body > .row .col-lg-2 {
+  width: 14%;
+}
+body > .row > .container > p {
+  color: #7c7c7c;
+  font-size: 17px;
+  margin-top: 12px;
+}
+body > .row > .container .second {
   color: #0e0e0e;
-  font-size: 19px;
+  font-size: 16px;
+  line-height: 2;
 }
-body .container-fluid .cards > div {
+body .cards .row {
+  display: flex;
+}
+body .cards .row .col-lg-3 {
+  width: 19.3333%;
+  padding: 15px;
+  line-height: 1.5;
+}
+body .cards .row > div {
   border: 1px solid #cec6c6;
   display: inline-block;
   box-sizing: border-box;
   margin-right: -1px;
+  margin-left: 0;
 }
-body .container-fluid .cards .S p {
-  margin-bottom: 30px;
+body .cards .row > div:nth-child(1) {
+  border-top: 8px solid #afd7f1;
 }
-body .container-fluid .cards h3 {
-  margin-top: 30px;
+body .cards .row > div:nth-child(2) {
+  border-top: 8px solid #4aa1d7;
+}
+body .cards .row > div:nth-child(3) {
+  border-top: 8px solid #247bb1;
+}
+body .cards .row > div:nth-child(4) {
+  border-top: 8px solid #105c8d;
+}
+body .cards .row h3 {
   color: #0e0e0e;
 }
-body .container-fluid .cards .price {
+body .cards .row p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 45px;
+}
+body .cards .row .price {
   color: #5596e0;
 }
-body .container-fluid .cards .price p {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-body .container-fluid .cards .btn {
+body .cards .row .btn {
   border-radius: 0;
-  padding: 6px 22px;
+  padding: 8px 24px;
   font-size: 12px;
   color: #5596e0;
-  margin-bottom: 20px;
+}
+body .footer {
+  margin-top: 50px;
 }
 body .footer .btn {
   border-radius: 0;
   padding: 11px 30px;
   font-size: 20px;
-  margin-top: 40px;
+  margin-top: 30px;
   border: none;
 }
 body .footer .btn-primary {
@@ -51,8 +83,9 @@ body .footer .btn-primary {
 body .footer .btn-primary:hover {
   background-color: #2375d3;
 }
-body .footer small {
+body .footer p {
   color: #7c7c7c;
+  font-size: 18px;
 }
 body .footer .black {
   margin-left: 40px;
@@ -63,42 +96,34 @@ body .footer .black:hover {
   background-color: #7c7c7c;
   color: #FFFFFF;
 }
-@media screen and (max-width: 1264px) and (min-width: 960px) {
-  .col-md-offset-1 p {
+@media screen and (max-width: 1200px) {
+  body > .row .col-lg-2 {
     width: 100%;
+    margin-left: 20px;
   }
-  .col-md-offset-1 .container-fluid .cards {
-    width: 30%;
+  body .cards .row {
+    justify-content: center;
   }
-  .col-md-offset-1 .container-fluid .cards .S p {
-    margin-bottom: 20px;
-  }
-  .col-md-offset-1 .price {
+}
+@media screen and (max-width: 992px) {
+  body .cards .row {
     display: inline-block;
   }
-}
-@media screen and (max-width: 959px) and (min-width: 600px) {
-  .cards div {
-    width: 40%;
-    margin-bottom: 20px;
-  }
-  .second {
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  .price {
-    display: inline-table;
-  }
-  .price p {
-    min-height: 40px;
-    margin-bottom: 0;
+  body .cards .row .col-lg-3 {
+    width: 45%;
   }
 }
-@media screen and (max-width: 599px) {
-  .cards div {
+@media screen and (max-width: 768px) {
+  body > .row .col-lg-2 {
+    margin-left: 0;
+  }
+  body .cards .row {
+    display: inline-block;
+  }
+  body .cards .row .col-lg-3 {
     width: 100%;
   }
-  .cards .price p {
-    margin-bottom: 10px;
+  body .footer .black {
+    margin-left: 0;
   }
 }
