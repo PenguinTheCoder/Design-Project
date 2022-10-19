@@ -6,7 +6,7 @@
 @hc: #0e0e0e;
 @mc: #7c7c7c;
 @lc: #FFFFFF;
-@bl: #5596e0;
+@bc: #5596e0;
 @dc: #000000;
 @ss: #cec6c6;
 
@@ -16,162 +16,146 @@
 @screen_lg: 1200px;
 
 body{
-   .header{
-      h2{
-         color: @hc;
-      }
-      p{
-         color: @mc;
-         font-size: 20px;
-         margin-bottom: 30px;
-      }
-   }   
-   >.row{
-      position: relative;
-      left: 5%;
-      .col-lg-2{
-         width: 14%;
-      }
-      >.container{
+   .container{
+      padding: 0;
+      width: 70%;
+      .header{
+         >h2{
+            color: @hc;
+         }
          >p{
             color: @mc;
-            font-size: 17px;
-            margin-top: 12px;
+            font-size: 20px;
+            margin-bottom: 35px;
          }
-         .second{
-            color: @hc;
-            font-size: 16px;   
-            line-height: 2;        
-         } 
-      } 
-   }      
-   .cards{
+      }   
       .row{
-         display: flex;
-         .col-lg-3{
-            width: 19.3333%;
-            padding: 15px;
-            line-height: 1.5;
+         margin-bottom: 30px;
+         .col-md-2{
+            text-align: start;
+            line-height: 2;
+            padding-left: 0;
+            padding-right: 0;
+            @media (max-width:@screen_lg) {
+               width: 100%;
+            }
+            >p{
+               color: @mc;
+               font-size: 16px;
+               padding-bottom: 20px;
+            }
+            p:nth-child(2){
+               color: @hc;    
+               font-size: 15px; 
+               font-weight: bold;
+            }
          }
-         >div{
-            border: 1px solid @ss;
-            display: inline-block;
-            box-sizing: border-box;   
-            margin-right: 0 - 1px;
-            margin-left: 0;
+         .col-md-10{
+            padding-left: 30px;
+            padding-right: 0px;
+            @media (max-width:@screen_lg){
+               width: 100%;
+            }
+         }             
+         .cards{
+            >div{
+               border: 1px solid @ss;
+               display: inline-block;
+               box-sizing: border-box;   
+               margin-right: 0 - 1px;
+               margin-left: 0;
+               padding: 10px 20px;
+                  &:nth-child(1){
+                     border-top:8px solid #afd7f1
+                  }
+                  &:nth-child(2){
+                     border-top:8px solid #4aa1d7
+                  }
+                  &:nth-child(3){
+                     border-top:8px solid #247bb1
+                  }
+                  &:nth-child(4){
+                     border-top:8px solid #105c8d
+                  }
+            }
+            .pr-title{
+               color: @hc;
+            }
+            .pr-desc{
+               overflow: hidden;
+               text-overflow: ellipsis;
+               line-height: 2;
+               min-height: 56px;
+               @media (max-width:@screen_md){
+                  min-height: 90px;
+               }
+            }
+            .pr-num{
+               color: @bc;
+               font-weight: bold;
+               padding-bottom: 10px;
+            }
+            .pr-btn{
+               padding-bottom: 10px;
+            }
+            .btn {
+               border-radius: 0;
+               padding: 8px 24px;
+               font-size: 12px;
+               color: @bc;
+               font-weight: bold;
+            }  
          }
-         >div:nth-child(1){
-            border-top:8px solid #afd7f1
-         }
-         >div:nth-child(2){
-            border-top:8px solid #4aa1d7
-         }
-         >div:nth-child(3){
-            border-top:8px solid #247bb1
-         }
-         >div:nth-child(4){
-            border-top:8px solid #105c8d
-         }
-         h3{
-            color: @hc;
-         }
-         p{
-            overflow: hidden;
-            text-overflow: ellipsis;
-            min-height: 45px;
-         }
-         .price {
-            color: @bl;
-         }
+      }             
+      .footer{
          .btn {
             border-radius: 0;
-            padding: 8px 24px;
-            font-size: 12px;
-            color: @bl;
-         }  
-      }
-   } 
-     
-   .footer{
-      margin-top: 50px;
-      .btn {
-            border-radius: 0;
-            padding: 11px 30px;
+            padding: 10px 30px;
             font-size: 20px;
-            margin-top: 30px;
             border: none;
          }
-      .btn-primary {
-            background-color: @bl;
+         .btn-primary {
+            background-color: @bc;
          }
-      .btn-primary:hover {
+         .btn-primary:hover {
             background-color: #2375d3;
          }
-      p {
+         p {
             color: @mc;
             font-size: 18px;
+            margin-bottom: 30px;
          }
-      .black {
+         .black {
             margin-left: 40px;
             background-color: @dc;
             color: @lc;
+               &:hover {
+                  background-color: @mc;
+                  color: @lc;
+               }
          }
-      .black:hover {
-            background-color: @mc;
-            color: @lc;
-         }
-   }    
+      } 
+   }     
 }
 
-@media screen and (max-width:@screen_lg) {
-   body{    
-      >.row{
-         .col-lg-2{
-            width: 100%;
-            margin-left: 20px;
-         }
-      }
-      .cards{
-         .row{
-            justify-content: center;
-         }
-      }
-   }  
-}
+@media (max-width:@screen_lg) {
+   .col-md-3{
+      width: 45%;
+      margin-bottom: 20px;
+   }
+}  
 
-@media  screen and (max-width:@screen_md) {
-   body{
-      .cards{
-         .row{
-            display: inline-block;
-            .col-lg-3{
-               width: 45%;
-            }
-         }
-      }
-   }   
-}
+@media (max-width:@screen_md) {
+   .col-md-3{
+      width: 45%;
+      margin-bottom: 20px;
+   }
+}  
+
 
 @media screen and (max-width:@screen_xs) {
-   body{
-      >.row{
-         .col-lg-2{
-            margin-left: 0;
-         }
-      }
-      .cards{
-         .row{
-            display: inline-block;
-            .col-lg-3{
-               width: 100%;
-            }
-         }
-      }
-      .footer{
-         .black{
-            margin-left: 0;
-         }
-      }
-   }   
+   .col-md-3{
+      width: 100%;
+   }
 }
 
