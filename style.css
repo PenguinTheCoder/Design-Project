@@ -29,7 +29,7 @@ body .container .row .col-md-2 > p {
   font-size: 16px;
   padding-bottom: 20px;
 }
-body .container .row .col-md-2 p:nth-child(2) {
+body .container .row .col-md-2 > p:nth-child(2) {
   color: #0e0e0e;
   font-size: 15px;
   font-weight: bold;
@@ -43,7 +43,7 @@ body .container .row .col-md-10 {
     width: 100%;
   }
 }
-body .container .row .cards > div {
+body .container .row .col-md-3 {
   border: 1px solid #cec6c6;
   display: inline-block;
   box-sizing: border-box;
@@ -51,41 +51,58 @@ body .container .row .cards > div {
   margin-left: 0;
   padding: 10px 20px;
 }
-body .container .row .cards > div:nth-child(1) {
+@media (max-width: 1200px) {
+  body .container .row .col-md-3 {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 992px) {
+  body .container .row .col-md-3 {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  body .container .row .col-md-3 {
+    width: 100%;
+  }
+}
+body .container .row .col-md-3:nth-child(1) {
   border-top: 8px solid #afd7f1;
 }
-body .container .row .cards > div:nth-child(2) {
+body .container .row .col-md-3:nth-child(2) {
   border-top: 8px solid #4aa1d7;
 }
-body .container .row .cards > div:nth-child(3) {
+body .container .row .col-md-3:nth-child(3) {
   border-top: 8px solid #247bb1;
 }
-body .container .row .cards > div:nth-child(4) {
+body .container .row .col-md-3:nth-child(4) {
   border-top: 8px solid #105c8d;
 }
-body .container .row .cards .pr-title {
+body .container .row .col-md-3 .pr-title {
   color: #0e0e0e;
 }
-body .container .row .cards .pr-desc {
+body .container .row .col-md-3 .pr-desc {
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 2;
   min-height: 56px;
 }
 @media (max-width: 992px) {
-  body .container .row .cards .pr-desc {
+  body .container .row .col-md-3 .pr-desc {
     min-height: 90px;
   }
 }
-body .container .row .cards .pr-num {
+body .container .row .col-md-3 .pr-num {
   color: #5596e0;
   font-weight: bold;
   padding-bottom: 10px;
 }
-body .container .row .cards .pr-btn {
+body .container .row .col-md-3 .pr-btn {
   padding-bottom: 10px;
 }
-body .container .row .cards .btn {
+body .container .row .col-md-3 .btn {
   border-radius: 0;
   padding: 8px 24px;
   font-size: 12px;
@@ -117,21 +134,4 @@ body .container .footer .black {
 body .container .footer .black:hover {
   background-color: #7c7c7c;
   color: #FFFFFF;
-}
-@media (max-width: 1200px) {
-  .col-md-3 {
-    width: 45%;
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 992px) {
-  .col-md-3 {
-    width: 45%;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .col-md-3 {
-    width: 100%;
-  }
 }

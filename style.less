@@ -10,6 +10,8 @@
 @dc: #000000;
 @ss: #cec6c6;
 
+@border_top: 8px solid;
+
 
 @screen_xs: 768px;
 @screen_md: 992px;
@@ -43,11 +45,11 @@ body{
                color: @mc;
                font-size: 16px;
                padding-bottom: 20px;
-            }
-            p:nth-child(2){
+            &:nth-child(2){
                color: @hc;    
                font-size: 15px; 
                font-weight: bold;
+               }   
             }
          }
          .col-md-10{
@@ -57,26 +59,35 @@ body{
                width: 100%;
             }
          }             
-         .cards{
-            >div{
+         .col-md-3{
                border: 1px solid @ss;
                display: inline-block;
                box-sizing: border-box;   
                margin-right: 0 - 1px;
                margin-left: 0;
                padding: 10px 20px;
-                  &:nth-child(1){
-                     border-top:8px solid #afd7f1
-                  }
-                  &:nth-child(2){
-                     border-top:8px solid #4aa1d7
-                  }
-                  &:nth-child(3){
-                     border-top:8px solid #247bb1
-                  }
-                  &:nth-child(4){
-                     border-top:8px solid #105c8d
-                  }
+               @media (max-width:@screen_lg) {
+                     width: 45%;
+                     margin-bottom: 20px;
+               }      
+               @media (max-width:@screen_md) {
+                     width: 45%;
+                     margin-bottom: 20px;
+               }                
+               @media (max-width:@screen_xs) {
+                     width: 100%;
+               }
+         &:nth-child(1){
+               border-top:@border_top #afd7f1
+            }
+         &:nth-child(2){
+               border-top:@border_top #4aa1d7
+            }
+         &:nth-child(3){
+               border-top:@border_top #247bb1
+            }
+         &:nth-child(4){
+               border-top:@border_top #105c8d
             }
             .pr-title{
                color: @hc;
@@ -116,9 +127,9 @@ body{
          }
          .btn-primary {
             background-color: @bc;
-         }
-         .btn-primary:hover {
+         &:hover {
             background-color: #2375d3;
+            }   
          }
          p {
             color: @mc;
@@ -129,33 +140,12 @@ body{
             margin-left: 40px;
             background-color: @dc;
             color: @lc;
-               &:hover {
-                  background-color: @mc;
-                  color: @lc;
-               }
+         &:hover {
+            background-color: @mc;
+            color: @lc;
+            }
          }
       } 
    }     
-}
-
-@media (max-width:@screen_lg) {
-   .col-md-3{
-      width: 45%;
-      margin-bottom: 20px;
-   }
-}  
-
-@media (max-width:@screen_md) {
-   .col-md-3{
-      width: 45%;
-      margin-bottom: 20px;
-   }
-}  
-
-
-@media screen and (max-width:@screen_xs) {
-   .col-md-3{
-      width: 100%;
-   }
 }
 
