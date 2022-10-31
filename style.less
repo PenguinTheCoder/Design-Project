@@ -15,6 +15,7 @@
 @screen_xs: 768px;
 @screen_md: 992px;
 @screen_lg: 1200px;
+@screen_lg_less: (@screen_lg -1); // ? zaboravljen code
 
 .container{
    @media (min-width:@screen_lg){
@@ -32,12 +33,12 @@
    }
 }   
 .row{
-   margin-bottom: 30px;
-   .col-md-2{
+   .text{
       text-align: start;
       line-height: 2;
       padding-left: 0;
       padding-right: 0;
+      min-width: 230px;
       @media (max-width:@screen_lg) {
          width: 100%;
       }
@@ -53,20 +54,23 @@
       }
    }
    .col-md-10{
-      padding-left: 30px;
-      padding-right: 0px;
       @media (max-width:@screen_lg){
          width: 100%;
       }
-   }             
+   }    
    .col-md-3{
-      border: 1px solid @ss;
-      display: inline-block;
-      box-sizing: border-box;   
-      margin-right: 0 - 1px;
-      margin-left: 0;
-      padding: 10px 20px;
-      border-top: 8px solid;
+      &:nth-child(1) .price{
+         border-top-color: @btc;
+      }
+      &:nth-child(2) .price{
+         border-top-color: darken(@btc, 20%);
+      }
+      &:nth-child(3) .price{
+         border-top-color: darken(@btc, 40%);
+      }
+      &:nth-child(4) .price{
+         border-top-color: darken(@btc, 50%);
+      }
       @media (max-width:@screen_lg) {
          width: 45%;
          margin-bottom: 20px;
@@ -78,19 +82,16 @@
       @media (max-width:@screen_xs) {
          width: 100%;
       }
-      &:nth-child(1){
-         border-top-color: @btc;
-      }
-      &:nth-child(2){
-         border-top-color: darken(@btc, 20%);
-      }
-      &:nth-child(3){
-         border-top-color: darken(@btc, 40%);
-      }
-      &:nth-child(4){
-         border-top-color: darken(@btc, 50%);
-      }
-   }   
+   }         
+   .price{
+      border: 1px solid @ss;
+      display: inline-block;
+      box-sizing: border-box;   
+      padding: 10px 20px;
+      border-top: 8px solid;
+      width: 100%;
+   } 
+     
    .pr-title{
       color: @hc;
    }
@@ -108,15 +109,13 @@
       font-weight: bold;
       padding-bottom: 10px;
    }
-   .pr-btn{
-      padding-bottom: 10px;
-   }
    .btn {
       border-radius: 0;
       padding: 8px 24px;
       font-size: 12px;
       color: @bc;
       font-weight: bold;
+      margin-bottom: 10px;
    }       
 }             
 .footer{
@@ -128,8 +127,8 @@
    }
    .btn-primary {
       background-color: @bc;
-   &:hover {
-      background-color: #2375d3;
+      &:hover {
+         background-color: #2375d3;
       }   
    }
    p {
@@ -141,9 +140,9 @@
       margin-left: 40px;
       background-color: @dc;
       color: @lc;
-   &:hover {
-      background-color: @mc;
-      color: @lc;
+      &:hover {
+         background-color: @mc;
+         color: @lc;
       }
    }
 }      
