@@ -1,6 +1,9 @@
+.body {
+  font-size: 16px;
+}
 @media (min-width: 1200px) {
   .container {
-    width: 1400px;
+    width: 1450px;
   }
 }
 .header > h2 {
@@ -8,8 +11,11 @@
 }
 .header > p {
   color: #7c7c7c;
-  font-size: 20px;
+  font-size: 1.25em;
   margin-bottom: 35px;
+}
+.row .col-md-2 {
+  width: 20%;
 }
 @media (max-width: 1199px) {
   .row .col-md-2 {
@@ -17,21 +23,17 @@
   }
 }
 .row .text {
-  text-align: start;
+  text-align: left;
   line-height: 2;
-  padding-left: 0;
-  padding-right: 0;
-  min-width: 230px;
+  padding-right: 5px;
 }
-.row .text > p {
+.row .text p {
   color: #7c7c7c;
-  font-size: 16px;
+  font-size: 1.15em;
   padding-bottom: 20px;
 }
-.row .text > p:nth-child(2) {
-  color: #0e0e0e;
-  font-size: 15px;
-  font-weight: bold;
+.row .col-md-10 {
+  width: 80%;
 }
 @media (max-width: 1199px) {
   .row .col-md-10 {
@@ -55,75 +57,93 @@
     width: 100%;
   }
 }
-.row .col-md-3:nth-child(1) .price {
-  border-top-color: #afd7f1;
-}
 .row .col-md-3:nth-child(2) .price {
   border-top-color: #58ace2;
+  border-left: none;
+}
+@media (max-width: 991px) {
+  .row .col-md-3:nth-child(2) .price {
+    border-left: 1px solid #cec6c6;
+  }
 }
 .row .col-md-3:nth-child(2) .price .btn {
   color: red;
 }
 .row .col-md-3:nth-child(3) .price {
   border-top-color: #207ab4;
+  border-left: none;
+}
+@media (max-width: 991px) {
+  .row .col-md-3:nth-child(3) .price {
+    border-left: 1px solid #cec6c6;
+  }
+}
+@media (max-width: 1199px) {
+  .row .col-md-3:nth-child(3) .price {
+    border-left: 1px solid #cec6c6;
+  }
 }
 .row .col-md-3:nth-child(4) .price {
   border-top-color: #185c89;
+  border-left: none;
+  padding: 20px 15px;
+}
+@media (max-width: 991px) {
+  .row .col-md-3:nth-child(4) .price {
+    border-left: 1px solid #cec6c6;
+  }
 }
 .row .price {
   border: 1px solid #cec6c6;
-  display: inline-block;
+  text-align: center;
+  display: block;
   box-sizing: border-box;
-  padding: 10px 20px;
-  border-top: 8px solid;
-  width: 100%;
+  padding: 20px 20px;
+  border-top: 8px solid #afd7f1;
+  margin-bottom: 40px;
 }
 .row .price .pr-title {
   color: #0e0e0e;
+  margin-top: 20px;
 }
 .row .price .pr-desc {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   line-height: 2;
   min-height: 56px;
-}
-@media (max-width: 991px) {
-  .row .price .pr-desc {
-    min-height: 90px;
-  }
+  margin-bottom: 10px;
 }
 .row .price .pr-num {
   color: #5596e0;
-  font-weight: bold;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 .row .price .btn {
   border-radius: 0;
   padding: 8px 24px;
-  font-size: 12px;
+  font-size: 0.75em;
   color: #5596e0;
-  font-weight: bold;
-  margin-bottom: 10px;
 }
 .footer .btn {
   border-radius: 0;
   padding: 10px 30px;
-  font-size: 20px;
+  font-size: 1.25em;
   border: none;
+  margin: 0px 40px;
 }
 .footer .btn-primary {
   background-color: #5596e0;
+  margin-right: 0px;
 }
 .footer .btn-primary:hover {
   background-color: #2375d3;
 }
 .footer p {
   color: #7c7c7c;
-  font-size: 18px;
+  font-size: 1.125em;
   margin-bottom: 30px;
 }
 .footer .black {
-  margin-left: 40px;
   background-color: #000000;
   color: #FFFFFF;
 }
