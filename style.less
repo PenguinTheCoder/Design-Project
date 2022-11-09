@@ -75,47 +75,58 @@
       }
       &:nth-child(2){
          .price{
-            border-top-color: darken(@btc, 20%);
             border-left: none;
             @media (max-width:@screen_md_less) {
                border-left: 1px solid @ss;
             }    
-            .btn {
-               color: red;
+            &::before{
+               border-top-color: darken(@btc, 20%);
             }
          }
       }
       &:nth-child(3){ 
          .price{
-            border-top-color: darken(@btc, 40%);
             border-left: none;
             @media (max-width:@screen_md_less) {
                border-left: 1px solid @ss;
             }
             @media (max-width:@screen_lg_less) {
                border-left: 1px solid @ss;
-            } 
+            }
+            &::before{
+               border-top-color: darken(@btc, 40%);
+            }
          }
       }
       &:nth-child(4){ 
          .price{
-            border-top-color: darken(@btc, 50%);
             border-left: none;
             padding: 20px 15px;
             @media (max-width:@screen_md_less) {
                border-left: 1px solid @ss;
+            }
+            &::before{
+               border-top-color: darken(@btc, 50%);
             } 
          }
       }
    }
    .price{
       border: 1px solid @ss;
+      border-top: none;
       text-align: center;
       display: block;
       box-sizing: border-box;   
       padding: 20px 20px;
-      border-top: 8px solid @btc;
       margin-bottom: 40px;
+      &::before{
+         content: '';
+         width: 100%;
+         border-top: 8px solid @btc;
+         position: absolute;
+         left: 0;
+         top: 0;
+      }
       .pr-title{
          color: @hc;
          margin-top: 20px;
