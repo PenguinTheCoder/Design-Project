@@ -28,10 +28,11 @@
    }
 }
 .header{
-   >h2{
+   h2{
       color: @hc;
+      font-weight: bold;
    }
-   >p{
+   p{
       color: @mc;
       font-size: 1.250em;
       margin-bottom: 35px;
@@ -118,6 +119,8 @@
       .pr-title{
          color: @hc;
          margin-top: 20px;
+         font-size: 1.750em;
+         font-weight: bold;
       }
       .pr-desc{
          display: -webkit-box;
@@ -141,6 +144,15 @@
 }                
              
 .footer{
+   h2{
+      color: @hc;
+      font-weight: bold;
+   }
+   p{
+      color: @mc;
+      font-size: 1.375em;
+      margin-bottom: 30px;
+   }
    .btn {
       border-radius: 0;
       padding: 10px 30px;
@@ -154,11 +166,6 @@
       &:hover {
          background-color: #2375d3;
       }   
-   }
-   p {
-      color: @mc;
-      font-size: 1.125em;
-      margin-bottom: 30px;
    }
    .black {
       background-color: @dc;
